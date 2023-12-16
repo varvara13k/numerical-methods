@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from numpy.linalg import pinv
 import numpy as np
 
-def matrix_iterative_method(W, p, F, max_iterations=100):  # матрично-итерационный метод
+def iterative_computational_procedure(W, p, F, max_iterations=100):  # матрично-итерационный метод
     background = [] # общий список для хранения индексов фоновых точек
 
     for k in range(max_iterations):
@@ -60,7 +60,7 @@ p /= np.max(p)
 
 # получение восстановленного изображения каждым из 3-х методов
 
-iterative_restored_image = matrix_iterative_method(W, p, 0)
+iterative_restored_image = iterative_computational_procedure(W, p, 0)
 
 
 # визуализация исходного изображения
